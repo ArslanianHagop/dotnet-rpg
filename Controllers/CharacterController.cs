@@ -53,7 +53,7 @@ namespace dotnet_rpg.Controllers
         public async Task<ActionResult<ServiceResponse<List<GetCharacterDto>>>> DeleteCharacter(int id)
         {
             var response = await _characterService.DeleteCharacter(id);
-            if(response.Success)
+            if(!response.Success)
             {
                 return NotFound(response);
             }
