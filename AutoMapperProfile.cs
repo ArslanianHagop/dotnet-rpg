@@ -4,6 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using AutoMapper;
 using dotnet_rpg.Dtos.Character;
+using dotnet_rpg.Dtos.Fight;
+using dotnet_rpg.Dtos.Skill;
+using dotnet_rpg.Dtos.Weapon;
 
 namespace dotnet_rpg
 {
@@ -13,6 +16,9 @@ namespace dotnet_rpg
         {
             CreateMap<Character, GetCharacterDto>();
             CreateMap<AddCharacterDto, Character>();
+            CreateMap<Weapon, GetWeaponDto>();
+            CreateMap<Skill, GetSkillDto>();
+            CreateMap<Character, HighscoreDto>();
             // CreateMap<UpdateCharacterDto, Character>(); if you want to use automapper during update, you lose control over which specific properties you want to update.
         }
     }
